@@ -19,7 +19,7 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
-# include "../minilibx/mlx.h"
+# include <stdio.h>
 
 typedef enum		e_bool
 {

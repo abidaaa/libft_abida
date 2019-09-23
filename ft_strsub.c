@@ -16,10 +16,14 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*tmp;
+	int	j;
 
 	if (!s)
 		return (NULL);
 	i = 0;
+	j = ft_strlen(s);
+	if (start > j)
+		return (NULL);
 	tmp = ft_strnew(len);
 	if (tmp == NULL)
 		return (NULL);
