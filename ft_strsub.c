@@ -6,7 +6,7 @@
 /*   By: aabouibr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/08 11:26:00 by aabouibr          #+#    #+#             */
-/*   Updated: 2018/10/15 19:17:56 by aabouibr         ###   ########.fr       */
+/*   Updated: 2019/11/25 19:53:51 by aabouibr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*tmp;
-	int	j;
+	size_t	j;
 
 	if (!s)
 		return (NULL);
