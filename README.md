@@ -25,19 +25,19 @@ As you can see from the [Project instructions][1], there are 4 sections:
 3.  **Bonus Functions:** Functions 42 deems will be useful for linked list manipulation
 4.  **Personal Functions:** Functions I believe will be useful later. [Documented here][3].
 
-Libc functions | Additional functions | Bonus Functions | Personal Functions
-:----------- | :-----------: | :-----------: | -----------:
-memset		| ft_memalloc	| ft_lstnew		| ft_capitalize 
-bzero		| ft_memdel		| ft_lstdelone	| ft_countwords 
-memcpy		| ft_strnew		| ft_lstdel		| ft_islower    
-memccpy		| ft_strdel		| ft_lstadd		| ft_isupper    
-memmove		| ft_strclr		| ft_lstiter	| ft_strndup    
-memchr		| ft_striter	| ft_lstmap		| ft_lst_reverse
-memcmp		| ft_striteri	|				| ft_realloc
-strlen		| ft_strmap		|				| ft_strjoinch
-strdup		| ft_strmapi	|				| ft_strnchr
-strcpy		| ft_strequ		|				| ft_copyuntil
-strncpy		| ft_strnequ	|			| ft_strstartswith
+Libc functions | Additional functions | Bonus Functions
+:----------- | :-----------: | :-----------:
+memset		| ft_memalloc	| ft_lstnew		
+bzero		| ft_memdel		| ft_lstdelone	
+memcpy		| ft_strnew		| ft_lstdel		
+memccpy		| ft_strdel		| ft_lstadd		
+memmove		| ft_strclr		| ft_lstiter	
+memchr		| ft_striter	| ft_lstmap		
+memcmp		| ft_striteri	|				
+strlen		| ft_strmap		|				
+strdup		| ft_strmapi	|				
+strcpy		| ft_strequ		|				
+strncpy		| ft_strnequ	|			
 strcat		| ft_strsub		| | ft_intlen
 strlcat		| ft_strjoin	| | ft_strendswith
 strchr		| ft_strtrim	| | ft_pathjoin
@@ -97,90 +97,4 @@ You have to tell the file where your library resides and which library it is usi
 
 That's it. Now run it using `./a.out`
 
-### How do I test it? How do I test my own implementations?
-
-To test the code we're going to be using @alelievr's [Libft Unit Test][4]. There are [some][5] [good][6] [others][7] but I'll only be covering this one.
-
-#### 1. To test the code in this repo
-
-1. Clone this repo and cd into it, make sure it's called `libft`:
-		
-		git clone https://github.com/R4meau/libft
-		cd libft/
-2. Copy all the source files to the root directory:
-	
-		make copy
-3. Run Make so you can build the library:
-		
-		make
-4. Go back to the root directory and download @alelievr's Libft Unit Test:
-		
-		cd ..
-		git clone https://github.com/alelievr/libft-unit-test
-5. Go into the test folder and run the test:
-
-		cd libft-unit-test/
-		make f
-
-If you did everything correctly you should get a cool list of tests showing you the function names and if they passed or not.
-
-#### 2. To test your own code
-
-You might want to have a go at this project too. If you've never heard of Makefiles, don't worry, you don't have to learn about it now. So go ahead and follow those steps:
-
-1. Create a directory for your project, make sure you call it `libft`:
-
-		mkdir libft
-2. Clone this repo (don't name it libft) and copy the Makefile-sample as Makefile and libft.h to your own project:
-
-		git clone https://github.com/R4meau/libft r4-libft
-		cp r4-libft/Makefile-sample libft/Makefile
-		cp r4-libft/libft.h libft/
-3. Go to your project, [read the instructions][1] for the function you want to create, code it and uncomment it from the Makefile:
-
-		cd libft
-		vim ft_memset.c
-		vim Makefile
-		
-	As an example, after creating ft_memset as your first function, you go into the Makefile, remove the `#` in front of `FILES`, remove the `\` at the end of `ft_memset` and add a `#` in front of `ft_bzero`. 
-	
-	If it still looks complicated, **DON'T PANIC**, [just ask me][8] :)
-4. Run Make so you can build the library:
-		
-		make	
-5. Go back to the root directory and download @alelievr's Libft Unit Test:
-		
-		cd ..
-		git clone https://github.com/alelievr/libft-unit-test
-6. Go into the test folder and run the test:
-
-		cd libft-unit-test/
-		make f
-
-That's it! If you're having some problems, just [send me a tweet][8]. If you think your problem is due to my code or this README, [create a new issue][9]. I'll definitely check it out.
-
-## Example usage
-
-This is a list of my projects that use Libft extensively:
-
-* [get_next_line](https://github.com/r4meau/get_next_line)
-* [ft_ls](https://github.com/r4meau/ft_ls)
-* [ft_contrast](https://github.com/R4meau/ft_contrast)
-* [minishell](https://github.com/R4meau/minishell)
-* [ft_select](https://github.com/R4meau/ft_select)
-
-## Sponsors
-
-<a href="https://app.codesponsor.io/link/Fo4iMpT8bBWXwb54Lj7DPwqL/R4meau/libft" rel="nofollow"><img src="https://app.codesponsor.io/embed/Fo4iMpT8bBWXwb54Lj7DPwqL/R4meau/libft.svg" style="width: 888px; height: 68px;" alt="Sponsor" /></a>
-
 Enjoy.
-
-[1]: https://github.com/R4meau/libft/blob/master/libft.en.pdf "Libft PDF"
-[2]: http://42.us.org "42 USA"
-[3]: https://github.com/R4meau/libft/wiki/Personal-Functions-Documentation
-[4]: https://github.com/alelievr/libft-unit-test
-[5]: https://github.com/yyang42/moulitest
-[6]: https://github.com/QuentinPerez/Maintest/tree/master/libft
-[7]: https://github.com/Kant1-0/libft-test
-[8]: https://twitter.com/r4meau
-[9]: https://github.com/R4meau/libft/issues
