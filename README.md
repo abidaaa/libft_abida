@@ -51,38 +51,33 @@ tolower		|
 Notes:
 
 - Most of the the files and function names are namespaced with an **ft** in front. It stands for Fourty Two
-- The project instructions require that we put all the source files in the root directory but for the sake of this Github repo, I separate them into sub folders.
-- I update this list almost every month with new personal functions. If you don't know what a function does, refer to the [Wiki][3], where I document all my personal functions.
+- The project instructions require that we put all the source files in the root directory.
 
-My code is not the best, but it passed all the 42 tests successfully.
+Bare in mind that my code is not the best ;).
 
 ### How does it work?
 
-The goal is to create a library called libft.a from the source files so I can later use that library from other projects at 42.
+The goal is to create a library called libft.a from the source files so I can later use that library from other projects at 1337 cursus.
 
-To create that library, after downloading/cloning this project, **cd** into the project, copy all the files from the sub folders to the root directory and finally, call make:
+To create that library, after downloading/cloning this project, **cd** into the project and call make:
 
-	git clone https://github.com/R4meau/libft
-	cd libft
-	make copy
+	git clone https://github.com/abdoabida/libft_abida.git
+	cd libft_abida
 	make
 
 You should see a *libft.a* file and some object files (.o).
 
-
-Now to clean up (removing the .o files and the .c files from the root), call `make clean`
-
-**WARNING:** `make clean` will delete all your files from your root directory. Do not run it if you're using the `Makefile` file. This is why I added the `Makefile-sample` file.
+Now to clean up (removing the .o files), call `make clean`
 
 ### How do I use the library?
 
-I added an example file called **example.c**, it's using the function **ft_putstr** to print "DON'T PANIC" to the screen. 
+I added a test file called **test.c**, it's using functions from the library to print the length of a string given as a parameter 
 
-If you try to compile it with gcc using `gcc example.c` you will get an *undefined symbol* error for ft_putstr. 
+If you try to compile it with gcc using `gcc test.c` you will get an *undefined symbol* error for the functions used. 
 
-You have to tell the file where your library resides and which library it is using:
+You have to give the file the path of the library and which library it is using:
 
-`gcc example.c -L. -lft`
+`gcc test.c -L. -lft`
 
 -L takes the path to your library. `.` in this case<br>
 -l takes the name of your library. This is the set of characters that come after `lib` in your library name.
